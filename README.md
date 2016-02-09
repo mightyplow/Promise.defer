@@ -23,24 +23,24 @@ After the snippet got executed, there is a defer() method available on the globa
 ## usage
 Create a deferred value by calling
 
-<code><pre>
+<pre><code>
     var deferred = Promise.defer();
-</pre></code>
+</code></pre>
 
 Now you can use the promise property.
 
-<code><pre>
+<pre><code>
     deferred.promise.then(function (data) {
         console.log(data);
     });
-</pre></code>
+</code></pre>
 
-Now, when the deferred value gets resolved, the then() method gets executed.
+Finally, when the deferred value gets resolved, the then() method gets executed.
  
-<code><pre>
+<pre><code>
     deferred.resolve('foobar')';
-</pre></code>
+</code></pre>
 
 ## example
 See the example.js file to see a full usage example. You can easily execute it with node.js to run it. (Actually it uses 
-the defer method which gets provided by the V8 engine.
+the defer method which gets provided by the V8 engine).
