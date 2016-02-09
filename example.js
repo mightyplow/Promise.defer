@@ -20,7 +20,7 @@
             setName: function (_name) {
                 name.resolve(_name);
             }
-        }
+        };
     }
 
     // create a Person instance
