@@ -32,5 +32,5 @@
         });
 
         return deferred;
-    }
+    };
 }(Promise, Object));
