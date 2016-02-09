@@ -8,17 +8,17 @@
     // constructor for a person object
     function Person () {
         // create a new deferred value
-        var name = Promise.defer();
+        var _name = Promise.defer();
 
         return {
             // returns the promise of the deferred value
             getName: function () {
-                return name.promise;
+                return _name.promise;
             },
 
-            // resolves the promise, when the name gets set
-            setName: function (_name) {
-                name.resolve(_name);
+            // resolves the promise, when the _name gets set
+            setName: function (name) {
+                _name.resolve(name);
             }
         };
     }
