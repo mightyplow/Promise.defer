@@ -1,4 +1,4 @@
-(function (Promise) {
+(function (Promise, Object) {
     'use strict';
 
     if ('defer' in Promise) {
@@ -13,10 +13,24 @@
             fnReject = reject;
         });
 
-        Object.definePropery(deferred, 'promise', {
-            value: deferred
+        Object.defineProperties(deferred, {
+            promise: {
+                value: deferred
+            },
+
+            resolve: {
+                value: function (reason) {
+                    fnResolve(reason);
+                }
+            },
+
+            reject: {
+                value: function (reason) {
+                    fnReject(reason);
+                }
+            }
         });
 
         return deferred;
     }
-}(Promise));
+}(Promise, Object));
