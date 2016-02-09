@@ -25,23 +25,17 @@ This method return an object with the following properties and methods:
 ## usage
 Create a deferred value by calling
 
-<pre><code>
     var deferred = Promise.defer();
-</code></pre>
 
 Now you can use the promise property.
 
-<pre><code>
     deferred.promise.then(function (data) {
         console.log(data);
     });
-</code></pre>
 
 Finally, when the deferred value gets resolved, the then() method gets executed.
  
-<pre><code>
     deferred.resolve('foobar')';
-</code></pre>
 
 ## example
 See the example.js file to see a full usage example. You can easily execute it with node.js to run it. (Actually it uses 
