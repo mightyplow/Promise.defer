@@ -13,7 +13,9 @@
             fnReject = reject;
         });
 
-        deferred.promise = deferred;
+        Object.definePropery(deferred, 'promise', {
+            value: deferred
+        });
 
         return deferred;
     }
