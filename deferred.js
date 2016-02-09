@@ -8,14 +8,14 @@
     Promise.defer = function () {
         var fnResolve, fnReject;
 
-        var deferred = new Promise(function (resolve, reject) {
+        var promise = new Promise(function (resolve, reject) {
             fnResolve = resolve;
             fnReject = reject;
         });
 
-        Object.defineProperties(deferred, {
+        return Object.defineProperties({}, {
             promise: {
-                value: deferred
+                value: promise
             },
 
             resolve: {
@@ -30,7 +30,5 @@
                 }
             }
         });
-
-        return deferred;
     };
 }(Promise, Object));
