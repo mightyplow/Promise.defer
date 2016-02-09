@@ -7,7 +7,9 @@ Promise object, which is available in chrome by default (I don't know, if it's d
 
 ## API
 After the snippet got executed, there is a defer() method available on the global Promise object 
-(if it wasn't there before). 
+(if it wasn't there before).
+
+This method return an object with the following properties and methods:
 
 ### properties
     promise
