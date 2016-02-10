@@ -1,7 +1,7 @@
-(function (Promise, Object) {
+(function (Object, Promise, global) {
     'use strict';
 
-    if ('defer' in Promise) {
+    if (!('Promise' in global) || 'defer' in Promise) {
         return;
     }
 
@@ -25,4 +25,8 @@
             reject: PropertyValue(fnReject)
         });
     };
-}(Promise, Object));
+}(
+    Object,
+    (typeof Promise !== 'undefined' ? Promise : {}),
+    (typeof window !== 'undefined') ? window : global)
+);
