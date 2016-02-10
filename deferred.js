@@ -5,6 +5,12 @@
         return;
     }
 
+    function PropertyValue (val) {
+        return {
+            value: val
+        };
+    }
+
     Promise.defer = function () {
         var fnResolve, fnReject;
 
@@ -14,21 +20,9 @@
         });
 
         return Object.create({}, {
-            promise: {
-                value: promise
-            },
-
-            resolve: {
-                value: function (reason) {
-                    fnResolve(reason);
-                }
-            },
-
-            reject: {
-                value: function (reason) {
-                    fnReject(reason);
-                }
-            }
+            promise: PropertyValue(promise),
+            resolve: PropertyValue(fnResolve),
+            reject: PropertyValue(fnReject)
         });
     };
 }(Promise, Object));
