@@ -6,7 +6,7 @@
     delete Promise.defer;
 
     // execute the deferred snippet (does nothing in V8)
-    require('./deferred');
+    require('./defer');
 
     // constructor for a person object
     function Person () {
