@@ -2,6 +2,9 @@
 (function () {
     'use strict';
 
+    // remove the V8 Promise defer method()
+    delete Promise.defer;
+
     // execute the deferred snippet (does nothing in V8)
     require('./deferred');
 
