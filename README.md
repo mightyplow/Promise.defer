@@ -1,4 +1,4 @@
-# deferred
+# deferred.js
 emulates the defer() method of the <a href="https://github.com/kriskowal/q">q library</a>
 
 Sometimes you need a value which gets resolved later. The $q library therefore provides the defer() method. Sadly it is not implemented in the native <a href="https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Promise" >ES6 Promise object</a>. This small snippet adds the defer method to the Promise object, which is available in chrome by default (I don't know, if it's deprecated). 
