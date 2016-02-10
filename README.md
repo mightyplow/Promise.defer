@@ -5,7 +5,7 @@ Sometimes you need a value which gets resolved later. The $q library therefore p
 ## API
 After the snippet got executed, there is a defer() method available on the global Promise object (if it wasn't there before).
 
-This method return an object with the following properties and methods:
+This method returns an object with the following properties and methods:
 
 ### properties
     promise
