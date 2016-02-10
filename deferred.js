@@ -13,7 +13,7 @@
             fnReject = reject;
         });
 
-        Object.defineProperties(deferred, {
+        return Object.create({}, {
             promise: {
                 value: deferred
             },
@@ -30,7 +30,5 @@
                 }
             }
         });
-
-        return deferred;
     };
 }(Promise, Object));
