@@ -34,7 +34,7 @@
         console.log(name);
     });
 
-    // set the name of the persion asynchronously
+    // set the name of the person asynchronously
     setTimeout(function () {
         person.setName('mightyplow');
     }, 2000);
